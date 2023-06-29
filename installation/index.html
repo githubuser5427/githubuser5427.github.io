@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .window{
+            width: calc(100vw - 200px);
+            height: calc(100vh - 200px);
+            margin: 100px;
+            background-color: black;
+            font-size: 30px;
+            font-family: sans-serif;
+            pointer-events:stroke;
+        }
+        .windowtitle{
+            padding: 30px
+        }
+        .center{
+            text-align: center;
+        }
+        .choosepart{
+            background-color: green;
+            width: max-content;
+            border-radius: 25px;
+        }
+        .phase1, .phase2, .phase3, .phase4, .phase5, .phase6{
+            display: flex;
+            justify-content: center;
+        }
+        .hoverable:hover{
+            background-color: red;
+        }
+        .choosepart > div > .hoverable{
+            border-radius: 25px;
+        }
+    </style>
+    <script>
+        function phase(phase){
+            if(typeof phase == typeof 0) if(phase % 1 == 0) {
+                if(phase == 2) window.location.href = "../bsod/"
+                prevPhase = phase - 1
+                document.querySelector(`phase${prevPhase}`).style.display = none
+                document.querySelector(`phase${phase}`).style.display = flex
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="window">
+        <div class="windowtitle">
+            Утсанока шинд 4.9
+        </div>
+        <div class="phase1">
+            <div class="center choosepart">
+                Вибрит радзил)))
+                <br>
+                <br>
+                <div onclick="phase(2)">
+                    <div class="hoverable">&nbsp;&nbsp;Неразмеченое пространство на диске 1&nbsp;&nbsp;</div>
+                    <br>
+                    <div class="hoverable">Неразмеченое пространство на диске 2</div>
+                    <br>
+                    <div class="hoverable">Неразмеченое пространство на диске 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
